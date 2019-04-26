@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>canvasImage</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#canvas {
+			border: 1px solid black;
+			background: ivory;
+			display: block;
+			margin: 20px auto;
+		}
+	</style>
+</head>
+<body>
+<canvas id="canvas" width="600" height="400">您的浏览器,版本太低,请升级您的浏览器</canvas>
+<audio src="../music/b.mp3" id="music"></audio>
+<script>
+	{
+		var music = document.getElementById("music");
+		// document.onkeydown = function (e){
+		// 	var keyOne = e.keyCode;
+		// 	console.log(keyOne);
+		// 	if(keyOne== 37 && e.keyCode == 38){
+		// 		music.load();
+		// 		music.play();
+		// 		console.log("我执行了");
+		// 	}
+		// }
+		let canvas = document.getElementById("canvas");
+		let ctx = canvas.getContext("2d");
+		let R = {
+			"girl": "girl.png",
+			"man": "man.png",
+			"b0": "b0.png",
+			"b1": "b1.png",
+			"b2": "b2.png",
+			"b3": "b3.png"
+		}
+		let amount = Object.keys(R).length;
+		let count = 0;
+		// for(let k in R){
+		// 	var img = new Image();
+		// 	img.src = "../images/ges/" + R[k];
+		// 	img.onload = function (){
+		// 		R[k] = img;
+		// 		count++;
+		// 		count == amount && start();
+		// 	}
+		// }
+		//图片加载器
+		for (var k in R) {
+			!function (k) {
+				var img = new Image();
+				img.src = "../images/ges/" + R[k];
+				img.onload = function () {
+					R[k] = img;
+					count++;
+					count == amount && start();
+				}
+			}(k)
+		}
+
+		function start() {
+			let frame = 0
+			setInterval(function () {
+				frame++;
+				ctx.clearRect(0, 0, 600, 400);
+				ctx.font = "20px Arial";
+				ctx.fillText(frame, 50, 60);
+				girlDemo.update();
+				girlDemo.render();
+
+			}, 20)
+		}
+
+		function Girl() {
+			//切片的宽高
+			this.width = 79;
+			this.height = 108;
+			//动画的切换
+			this.step = 0;
+			//动画行走的方向
+			this.down = 0;
+			this.up = 3;
+			this.left = 1;
+			this.right = 2;
+			//
+			this.x = 0;
+			this.y = 20;
+			//动画在画布上的坐标
+			this.xLocation = 100;
+			this.yLocation = 100;
+			//动画行走的方向
+			this.direction = this.left;
+			//动画行走的速度
+			this.speed = 10;
+			//是否行走,是否进入战斗的状态
+			this.isMoving = false;
+			this.isInBattle = false;
+		}
+
+		Girl.prototype.walk = function () {
+			//状态机
+			if (this.isMoving) {
+				this.step++;
+				this.step %= 8;
+				this.x = this.width * this.step;
+				switch (this.direction) {
+					case this.down :
+						this.y = this.down * this.height;
+						this.yLocation < 400 ? this.yLocation += this.speed : this.yLocation = 0;
+						break;
+					case this.up :
+						// drawImage(image,sourceX,sourceY,sourceWidth,sourceHeight,destX,destY,destWidth, destHeight)
+						this.y = this.up * this.height;
+						this.yLocation > 0 ? this.yLocation -= this.speed : this.yLocation = 400;
+						break;
+					case this.right :
+						this.y = this.right * this.height;
+						this.xLocation < 600 ? this.xLocation += this.speed : this.xLocation = 0;
+						break;
+					case this.left :
+						this.y = this.left * this.height;
+						this.xLocation > 0 ? this.xLocation -= this.speed : this.xLocation = 600;
+						break;
+
+				}
+			}
+		}
+
+		Girl.prototype.update = function () {
+			//行走
+			this.walk();
+			//战斗
+			Ak47.fire(this.isInBattle, this.xLocation, this.yLocation, this.direction);
+
+		}
+		Girl.prototype.render = function () {
+
+			// ctx.drawImage(R.girl, 79 * 3, 108 * 3, 79, 108, 100, 100, 79, 108);
+			ctx.drawImage(R.girl, this.x, this.y, this.width, this.height, this.xLocation, this.yLocation, this.width, this.height);
+		}
+		//单独设置一个枪械类
+		//可以开火
+
+		function Bullet() {
+			this.location = [];//子弹的位置,如果发射,计入数组;
+		}
+
+		Bullet.prototype.fire = function (isinBattle, x, y, z) {
+			//开火后,子弹射出, 子弹编号计入数组
+			if (isInBattle) {
+				this.location.push({x: x, y: y, z: z})
+				music.play();
+			}
+			//子弹一旦被射出,自己会向前飞行
+			//所有射出的子弹都要渲染;
+			for (let i = 0; i < this.location.length; i++) {
+				if (2 == this.location[i].z) {
+					if (this.location[i].x < 600) {
+						this.location[i].x += 20
+						for (let j = 0; j < 4; j++) {
+							ctx.drawImage(R["b" + j], this.location[i].x, this.location[i].y);
+						}
+					} else {
+						this.location.splice(i, 1);
+					}
+				} else {
+					console.log("我是否被执行了");
+					this.location[i].x -= 20
+					for (let j = 0; j < 4; j++) {
+						ctx.drawImage(R["b" + j], this.location[i].x, this.location[i].y);
+					}
+				}
+			}
+		}
+
+		var girlDemo = new Girl();
+		var Ak47 = new Bullet();
+		document.onkeydown = function (e) {
+			switch (e.keyCode) {
+				case 37 :
+					girlDemo.isMoving = true;
+					girlDemo.direction = girlDemo.left;
+					break;
+
+				case 38 :
+					girlDemo.isMoving = true;
+					girlDemo.direction = girlDemo.up;
+					break;
+				case 39 :
+					girlDemo.isMoving = true;
+					girlDemo.direction = girlDemo.right;
+					break;
+				case 40 :
+					girlDemo.isMoving = true;
+					girlDemo.direction = girlDemo.down;
+					break;
+				case 32:
+					girlDemo.isInBattle = true;
+					music.load();
+					break;
+				default :
+					console.log(e.keyCode);
+			}
+
+		}
+		document.onkeyup = function (e) {
+			girlDemo.isMoving = false;
+			girlDemo.isInBattle = false;
+		}
+
+	}
+</script>
+</body>
+</html>
