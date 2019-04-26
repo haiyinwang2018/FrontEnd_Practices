@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>拼图轮播图</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		div#carousel {
+			position: relative;
+			width: 900px;
+			height: 540px;
+			border: 1px solid black;
+			margin: 20px auto;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		ul {
+			list-style: none;
+			position: relative;
+		}
+
+		li {
+			position: absolute;
+			cursor: pointer;
+			top: 0px;
+			left: 0px;
+			display: none;
+
+		}
+
+		li.cur {
+			display: block;
+		}
+
+		div.btns > a {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			opacity: 0.5;
+			top: 50%;
+			margin-top: -20px;
+			background: red;
+			color: white;
+			line-height: 50px;
+			font-size: 33px;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 8px;
+			z-index: 999;
+		}
+
+		div.btns > a.left {
+			left: 5px;
+		}
+
+		div.btns > a.right {
+			right: 5px;
+		}
+
+	</style>
+</head>
+<body>
+<div id="carousel">
+	<ul>
+		<li class="cur"><a href="#"><img src="images/pintuCarousel/0.jpg" alt=""></a></li>
+		<li><a href="#"><img src="images/pintuCarousel/1.jpg" alt=""></a></li>
+		<li><a href="#"><img src="images/pintuCarousel/2.jpg" alt=""></a></li>
+		<li><a href="#"><img src="images/pintuCarousel/3.jpg" alt=""></a></li>
+		<li><a href="#"><img src="images/pintuCarousel/4.jpg" alt=""></a></li>
+		<li><a href="#"><img src="images/pintuCarousel/5.jpg" alt=""></a></li>
+		<li><a href="#"><img src="images/pintuCarousel/6.jpg" alt=""></a></li>
+	</ul>
+	<div class="btns">
+		<a href="#" class="left">&lt;</a>
+		<a href="#" class="right">&gt;</a>
+	</div>
+	<div class="trick"></div>
+</div>
+<script src="js/jQuery3.3.1.js"></script>
+<script>
+	var idx = 0;
+	var lock = true;
+	$(".right").on("click", function () {
+			if (!lock) {
+				return
+			}
+			lock = false;
+			idx++;
+			idx > $("ul > li").length - 1 && (idx = 0);
+			for (let i = 0; i < 100; i++) {
+				$("<div></div>").css({
+					"width": 90,
+					"height": 54,
+					"position": "absolute",
+					"top": parseInt(i / 10) * 54,
+					"left": i % 10 * 90,
+					"display": "none",
+					"background-image": "url(" + $("img").eq(idx).attr("src") + ")",
+					"background-position": (-i % 10 * 90) + "px " + (-parseInt(i / 10) * 54) + "px"
+
+				}).appendTo(".trick")
+			}
+
+			$(".trick div").each(function () {
+				$(this).delay(Math.random()*1200).fadeIn();
+				setTimeout(function () {
+					$(".trick").empty();
+					$("li").eq(idx).addClass("cur").siblings().removeClass("cur");
+					lock = true;
+				}, 1200);
+			})
+		}
+	)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>3D轮播图</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		div.outer {
+			position: relative;
+			width: 1000px;
+			height: 800px;
+			margin: 200px auto;
+			border: 1px solid black;
+			perspective: 800px;
+		}
+
+		ul {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0px;
+			top: 0px;
+			transform-style: preserve-3d;
+			list-style: none;
+			transition: all 0.2s ease 0s;
+		}
+
+		ul > li {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -39px;
+			margin-top: -39px;
+			width: 78px;
+			height: 78px;
+			text-align: center;
+			border: 1px solid black;
+
+		}
+
+		div.btn > div {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			font-size: 40px;
+			color: black;
+			text-align: center;
+			top: 50%;
+		}
+
+		div.btn > div:first-child {
+			left: 0;
+		}
+
+		div.btn > div:last-child {
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+<div class="outer">
+	<ul>
+	</ul>
+	<div class="btn">
+		<div class="left">&lt;</div>
+		<div class="right">&gt;</div>
+	</div>
+</div>
+<script src="js/jQuery3.3.1.js"></script>
+<script>
+	for (let j = 0; j < 99; j++) {
+		$("<li><img src=\"images/star/" + j + ".jpg\" alt=\"\"></li>").appendTo("ul")
+	}
+	//一共7层，每一圈几张图片自己定。
+	//首先每一圈的图片的rotateX：86deg,65deg,45deg,25deg,0deg,-25deg,-45deg,-65deg,-86deg。
+	//每一圈图片的个数
+	//4，6,12,14,23
+	for (let i = 0; i < 4; i++) {
+		$("li").eq(i).css({
+			"transform": "rotateY(" + (360 / 4) * i + "deg) rotateX(86deg) translateZ(250px)"
+		})
+	}
+	for (let i = 4; i < 10; i++) {
+		$("li").eq(i).css({
+			"transform": "rotateY(" + (360 / 6) * i + "deg) rotateX(65deg) translateZ(250px)"
+		})
+	}
+	for (let i = 10; i < 22; i++) {
+		$("li").eq(i).css({
+			"transform": "rotateY(" + (360 / 12) * i + "deg) rotateX(45deg) translateZ(250px)"
+		})
+	}
+	for (let i = 22; i < 36; i++) {
+		$("li").eq(i).css({
+			"transform": "rotateY(" + (360 / 14) * i + "deg) rotateX(25deg) translateZ(250px)"
+		})
+	}
+	for (let i = 36; i < 59; i++) {
+		$("li").eq(i).css({
+			"transform": "rotateY(" + (360 / 23) * i + "deg) rotateX(0deg) translateZ(250px)"
+		})
+	}
+	for (var i = 59; i < 73; i++) {
+		$("li").eq(i).css("transform", "rotateY(" + (360 / 14) * i + "deg) rotateX(-25deg) translateZ(250px)")
+	}
+	for (var i = 73; i < 85; i++) {
+		$("li").eq(i).css("transform", "rotateY(" + (360 / 12) * i + "deg) rotateX(-45deg) translateZ(250px)")
+	}
+	for (var i = 85; i < 91; i++) {
+		$("li").eq(i).css("transform", "rotateY(" + (360 / 6) * i + "deg) rotateX(-65deg) translateZ(250px)")
+	}
+	for (var i = 91; i < 99; i++) {
+		$("li").eq(i).css("transform", "rotateY(" + (360 / 8) * i + "deg) rotateX(-86deg) translateZ(250px)")
+	}
+	var deg = 0;
+	var deg2 = 0;
+	setInterval(function () {
+		deg++;
+		deg2++;
+		$("ul").css("transform", "rotateY(" + deg + "deg) rotateX(" + deg2 + "deg)")
+	}, 30)
+
+	// function randomPoint(r, n) {
+	// 	var x, y, z;
+	// 	var points =  [];
+	// 	var result =  [];
+	// 	while(points.length < n){
+	// 		while (result.length < 3) {
+	// 			x = (Math.random() * 2 - 1) * r;
+	// 			y = (Math.random() * 2 - 1) * r;
+	// 			z = (Math.random() * 2 - 1) * r;
+	// 			Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2) == Math.pow(r, 2) && (result = [x, y, z])
+	// 		}
+	// 		points.includes(result)
+	//
+	// 	}
+	// 	return points;
+	// }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>俄罗斯方块练习</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		body {
+			background-color: whitesmoke;
+		}
+
+		table {
+			border: 1px solid black;
+			margin: 20px auto;
+			border-collapse: collapse;
+		}
+
+		td {
+			border: 1px solid black;
+			width: 35px;
+			height: 35px;
+		}
+
+		.color1 {
+			background-color: blue;
+		}
+
+		.color2 {
+			background-color: deeppink;
+		}
+
+		.color3 {
+			background-color: skyblue;
+		}
+
+		.color4 {
+			background-color: navajowhite;
+		}
+
+		.color5 {
+			background-color: darkorange;
+		}
+
+		.color6 {
+			background-color: firebrick;
+		}
+
+		.color7 {
+			background-color: hotpink;
+		}
+
+
+	</style>
+</head>
+<body>
+<table>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<script src="js/block_json.js"></script>
+<script>
+	var mapData = [
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 4, 2, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 0, 2, 3, 0, 0, 0, 0, 0, 0],
+		[1, 2, 0, 4, 6, 1, 7, 0, 6, 1, 2, 3],
+		[9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+	]
+
+	function drawMap() {
+		for (let i = 0; i < 20; i++) {
+			for (let j = 0; j < 12; j++) {
+				document.getElementsByTagName("tr")[i].getElementsByTagName("td")[j].innerHTML = mapData[i][j];
+				mapData[i][j] != 0 ? document.getElementsByTagName("tr")[i].getElementsByTagName("td")[j].className = "color" + mapData[i][j] : 0;
+			}
+		}
+	}
+
+	var type = ["S", "Z", "J", "L", "I", "O", "T"];
+	var anyType;
+	var dir;
+	var anyDir;
+
+	function newShape() {
+		row = 0;
+		col = 0;
+		anyType = type[parseInt(Math.random() * type.length)];
+		dir = fangkuai[anyType].length;
+		anyDir = parseInt(Math.random() * dir);
+		return fangkuai[anyType][anyDir];
+	}
+
+	function draw(arr, row, col) {
+		for (let i = 0; i < 4; i++) {
+			for (let j = 0; j < 4; j++) {
+				arr[i][j] && (document.querySelectorAll("tr")[i + row].querySelectorAll("td")[j + col].className = "color" + arr[i][j]);
+
+			}
+		}
+
+	}
+
+	function clearAll() {
+		for (let i = 0; i < 20; i++) {
+			for (let j = 0; j < 12; j++) {
+				document.getElementsByTagName("tr")[i].getElementsByTagName("td")[j].className = "";
+			}
+		}
+	}
+
+	function check(arr, row, col) {
+		for (let j = 0; j < 4; j++) {
+			for (let k = 0; k < 4; k++) {
+				if (arr[j][k] != 0 && mapData[j + row][k + col] != 0) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	function stop() {
+		for (let j = 0; j < 4; j++) {
+			for (let k = 0; k < 4; k++) {
+				fangkuai[anyType][anyDir][j][k] != 0 && (mapData[j + row][k + col] = fangkuai[anyType][anyDir][j][k]);
+			}
+		}
+		disappear();
+	}
+
+	function disappear() {
+		for (let j = 0; j < 20; j++) {
+			for (let k = 0; k < 12; k++) {
+				if (mapData[j].indexOf(0) == -1) {
+					mapData.splice(j, 1);
+					mapData.unshift([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+				}
+
+			}
+		}
+	}
+
+	function isGameOver() {
+		for (let j = 0; j < 12; j++) {
+			if (mapData[0].indexOf(j) > 0) {
+				alert("Game Is Over !");
+				clearInterval(timer);
+			}
+		}
+		return true;
+	}
+
+	var row = 0;
+	var col = 0;
+	var speed = 0;
+	document.onkeydown = function (e) {
+		switch (e.keyCode) {
+			//32空格 37 左 38 上 39 右
+			case 37:
+				check(fangkuai[anyType][anyDir], row, col - 1) && col--;
+				break;
+			case 39:
+				check(fangkuai[anyType][anyDir], row, col + 1) && col++;
+				break;
+			case 38:
+				anyDir + 1 < dir ? (check(fangkuai[anyType][anyDir + 1], row, col) && anyDir++) :(check(fangkuai[anyType][0], row, col) && (anyDir =0));
+
+				break;
+			case 32:
+				while (check(fangkuai[anyType][anyDir], row + 1, col)) {
+					row++;
+				}
+				break;
+		}
+	}
+	//帧率
+	function changeSpeed(){
+		speed > 20 ? speed = 0 : speed ++;
+		if(speed %10 == 0){
+			row ++;
+		}
+	}
+
+	newShape();
+	drawMap();
+	var timer = setInterval(function () {
+		check(fangkuai[anyType][anyDir], row + 1, col) ? changeSpeed() : (stop() || (isGameOver() && newShape()));
+		clearAll();
+		drawMap();
+		draw(fangkuai[anyType][anyDir], row, col)
+	}, 50)
+</script>
+</body>
+</html>

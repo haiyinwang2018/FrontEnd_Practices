@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS 考试第一期</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.test {
+			margin: 20px auto;
+			width: 654px;
+			height: 355px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			border: 1px solid #E6E6E6;
+
+			padding: 0 14px;
+			background-color: #FAF9F8;
+			border-top: 2px solid #0083FF;
+
+
+		}
+
+		.test .title {
+			position: relative;
+			/* left:-14px; */
+			width: 100%;
+			height: 41px;
+
+		}
+
+		.test .title .left-top {
+			float: left;
+			width: 399px;
+			height: 41px;
+			border-bottom: 3px solid #0083FF;
+		}
+
+		.test .title .right-top {
+			float: right;
+			width: 255px;
+			height: 42px;
+			border-bottom: 1px solid #979797;
+		}
+
+		.test .content {
+			padding: 19px 0 17px 0;
+			height: 271px;
+			width: 100%;
+			position: relative;
+
+		}
+
+		a {
+			display: block;
+		}
+
+		.test .content .left {
+			float: left;
+		}
+
+		.test .content .left a img {
+			width: 237px;
+			height: 271px;
+			border-radius: 4px;
+		}
+
+		.test .content .same {
+			float: left;
+			padding-left: 9px;
+		}
+
+		.test .content .same a img {
+			border-radius: 4px;
+			height: 131px;
+		}
+
+		.test .content .same .two {
+			width: 197px;
+			height: 31px;
+			background-color: #FAFFF1;
+			border-left: 2px solid #0083FF;
+		}
+
+		.test .content .same .two h3 {
+			float: left;
+			font-family: "微软雅黑";
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 31px;
+			position: relative;
+			top: 2px;
+			left: 6px;
+		}
+
+		.test .content .same .two span {
+			float: right;
+			font-size: 12px;
+			color: rgb(151, 151, 151);
+			line-height: 31px;
+			position: relative;
+			top: 4px;
+		}
+
+		.test .content .same .three {
+			font-size: 14px;
+			color: #393939;
+			position: relative;
+			top: 6px;
+			left: 20px;
+		}
+
+		.test .content .same .three i {
+			width: 14px;
+			height: 14px;
+			background: url(images/jingling.png) no-repeat 0 -279px;
+			position: absolute;
+			top: 3px;
+			left: -20px;
+		}
+
+		.test .content .same .four {
+			font-size: 12px;
+			color: #9797A4;
+			position: relative;
+			top: 15px;
+
+		}
+
+		.test .content .same .four a {
+			display: inline;
+			text-decoration: none;
+			color: #9797A4;
+		}
+
+		.test .content .same .four a:hover {
+			color: #50BDEC;
+		}
+
+		.test .content .left a {
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+
+		.test .content .left a i {
+			width: 27px;
+			height: 27px;
+			margin-left: -15px;
+			margin-top: -15px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background: url(images/jingling.png) no-repeat -2px -202px;
+
+		}
+
+		.content .listnumber {
+			width: 223px;
+			height: 43px;
+			position: absolute;
+			bottom: -9px;
+			right: -26px;
+			background-color: transparent;
+		}
+
+		.content .listnumber i.right {
+			background: url(images/jingling.png) no-repeat -5px -164px;
+			width: 13px;
+			height: 13px;
+			top: 4px;
+			left: -16px;
+			position: absolute;
+
+
+		}
+
+		.content .listnumber i.left {
+			background: url(images/jingling.png) no-repeat -5px -124px;
+			width: 13px;
+			height: 13px;
+			top: 4px;
+			right: 32px;
+			position: absolute;
+
+
+		}
+
+		.content .listnumber .number {
+			width: 20px;
+			height: 20px;
+			background-color: white;
+			border-radius: 50%;
+			border: 1px solid #9CCDFB;
+			text-align: center;
+			float: left;
+			margin-left: 2px;
+		}
+	</style>
+</head>
+<body>
+<div class="test">
+	<div class="title">
+		<div class="left-top">热点精选</div>
+		<div class="right-top">更多</div>
+	</div>
+	<div class="content">
+		<div class="left">
+			<a href="#">
+				<i></i>
+				<img src="images/qianxi.png" alt="">
+			</a>
+		</div>
+		<div class="middle same">
+			<div class="one">
+				<a href="#"><img src="images/qiu.png" alt=""></a>
+			</div>
+			<div class="two"><h3>有球必应</h3><span>周一晚七点直播</span></div>
+			<div class="three">
+				<i></i> 科比韦德告别季谁更强
+			</div>
+			<div class="four">
+				杨毅：科比告别季效率最低
+				<a href="#">[详情]</a>
+			</div>
+		</div>
+		<div class="right same">
+			<div class="one">
+				<a href="#"><img src="images/qiu2.png" alt=""></a>
+			</div>
+			<div class="two">
+				<h3>长暂停</h3>
+				<span>每天更新</span>
+			</div>
+			<div class="three">
+				<i></i> 长暂停
+			</div>
+			<div class="four">
+				两分钟了解联盟大事场外风云
+				<a href="#">[详情]</a>
+			</div>
+		</div>
+		<div class="listnumber">
+			<i class="left"></i>
+			<div class="number">1</div>
+			<div class="number">2</div>
+			<div class="number">3</div>
+			<div class="number">4</div>
+			<div class="number">5</div>
+			<div class="number">6</div>
+			<div class="number">7</div>
+			<i class="right"></i>
+		</div>
+	</div>
+</div>
+</body>
+</html>

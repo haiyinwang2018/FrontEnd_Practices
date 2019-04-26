@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>js精灵之练习</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		div.parent {
+			margin: 20px auto;
+			width: 1000px;
+			height: 500px;
+			/*background-color: #99FFFF;*/
+			position: relative;
+		}
+
+		.sprite {
+			background: url("images/others/misaka.png") no-repeat;
+			position: relative;
+			left: 0px;
+			float: left;
+			width: 88px;
+			height: 99px;
+		}
+	</style>
+
+</head>
+<body>
+<div class="parent">
+	<div class="sprite"></div>
+</div>
+<script>
+	var sprite = document.querySelector(".sprite");
+	var i = 0;
+	var j = 0
+	var arr = [0, 101, 193, 279, 372, 465, 558, 651];
+	var timer = setInterval(function () {
+		i %= 7
+		sprite.style.backgroundPositionX =  -arr[i] + "px";
+		i++;
+		sprite.style.left = j + "px";
+		j <= 1000 ? j += 20 : j = 0;
+
+	}, 100)
+</script>
+</body>
+</html>

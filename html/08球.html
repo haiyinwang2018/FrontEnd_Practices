@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 1000px;
+        height: 1000px;
+        border: 1px solid #000;
+        margin: 10px auto;
+    }
+    .box1{
+        width: 30px;
+        height: 20px;
+        margin-top: 10px;
+        background: #000;
+    }
+    .box2{
+        width: 100px;
+        height: 40px;
+        margin-top: 10px;
+        background: yellow;
+    }
+    .box3{
+        width: 200px;
+        height: 60px;
+        margin-top: 10px;
+        background: green;
+    }
+    .box4{
+        width: 300px;
+        height: 100px;
+        margin-top: 10px;
+        background: pink;
+    }
+    .box5{
+        position: relative;
+        width: 400px;
+        height: 100px;
+        perspective: 1000px;
+        border: 1px solid #000;
+        left: 0;
+        top: 0;
+    }
+    ul{
+        list-style: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform-style: preserve-3d;
+        animation: xuanzhuan 5s linear 0s infinite ;
+    }
+    @-webkit-keyframes xuanzhuan{
+        form{
+            transform: rotateY(0deg)
+        }
+        to{
+            transform: rotateY(360deg)
+        }
+    }
+    .box5 ul li{
+        position: absolute;
+        left: 160px;
+        top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+        </div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5">
+            <ul>
+                <li><img src="./images/star/0.jpg" alt=""></li>
+                <li><img src="./images/star/1.jpg" alt=""></li>
+                <li><img src="./images/star/2.jpg" alt=""></li>
+                <li><img src="./images/star/3.jpg" alt=""></li>
+                <li><img src="./images/star/4.jpg" alt=""></li>
+                <li><img src="./images/star/5.jpg" alt=""></li>
+                <li><img src="./images/star/6.jpg" alt=""></li>
+                <li><img src="./images/star/7.jpg" alt=""></li>
+                <li><img src="./images/star/8.jpg" alt=""></li>
+                <li><img src="./images/star/9.jpg" alt=""></li>
+                <li><img src="./images/star/10.jpg" alt=""></li>
+                <li><img src="./images/star/11.jpg" alt=""></li>
+            </ul>
+        </div>
+        <div class="box4"></div>
+        <div class="box3"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+    </div>
+</body>
+</html>
+<script src="./js/jquery.min.js"></script>
+<script>
+$("ul li").each(function(i){
+    $(this).css({"transform":"rotateY("+i*30+"deg) translateZ(150px)"});
+})
+</script>

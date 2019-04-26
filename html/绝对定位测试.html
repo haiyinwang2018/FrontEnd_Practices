@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>布局再次测试</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/*div {*/
+		/*	width: 200px;*/
+		/*	height: 20px;*/
+
+		/*}*/
+
+		.parent {
+			margin : 0 auto;
+			/*position : absolute;*/
+			border: 2px solid black;
+			left:20px;
+			/*height : 200px;*/
+
+
+		}
+
+		.children {
+			border: 2px solid red;
+			width: 202px;
+			height : 300px;
+			position:absolute;
+			/*float: right;*/
+		}
+		.inner{
+			border: 2px dashed red;
+			margin: 0 auto;
+		}
+
+
+	</style>
+</head>
+<body>
+<div class="parent">parent
+	<div class="children"></div>
+</div>
+<!--<div class="inner">inner</div>-->
+<!--<div class="last">inner</div>-->
+<script src="js/jQuery3.3.1.js"></script>
+<script>
+
+	// var text =
+	var str = " 白日依山尽,黄河入海流.";
+	$(".children").on("mouseenter", function () {
+		str = str + $(this).html()
+		$(this).html(str);
+
+	})
+</script>
+</body>
+</html>

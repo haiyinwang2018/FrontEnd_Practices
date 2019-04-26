@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			position:relative;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			margin:20px auto;
+			border:2px solid black;
+			background: orange;
+			border-right-color: transparent;
+			position: absolute;
+			top : 0px
+		}
+		.left{
+			border-radius : 0px 200px 0 200px;
+			right:50%;
+			animation:xuan01 2s linear infinite;
+
+		}
+		@-webkit-keyframes xuan01 {
+			from{
+				transform : rotate(0deg);
+			}
+			to{
+				transform :  rotate(45deg);
+			}
+		}
+		@-webkit-keyframes xuan02 {
+			from{
+				transform : rotate(0deg);
+			}
+			to{
+				transform :  rotate(-45deg);
+			}
+		}
+		.right{
+			left:50%;
+			border-radius : 200px 0px 200px 0px;
+			animation : xuan02 2s linear infinite;
+		}
+		/*div::before{*/
+		/*	position:relative;*/
+		/*	!*display:block;*!*/
+		/*	content:"";*/
+		/*	width: 100px;*/
+		/*	height: 200px;*/
+		/*	border: 1px solid navy;*/
+		/*}*/
+	</style>
+</head>
+<body>
+	<div class = "left"></div>
+	<div class = "right"></div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="js/jQuery3.3.1.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		div {
+			width: 400px;
+			height: 400px;
+			margin: 20px auto;
+			overflow: hidden;
+			position: relative;
+
+		}
+
+		ul {
+			list-style: none;
+			width: 5000px;
+			height: 400px;
+			position: relative;
+		}
+
+		ul li {
+			float: left;
+			background-color: black;
+			width: 400px;
+			height: 400px;
+			color: white;
+			font-size: 200px;
+			line-height: 400px;
+			text-align: center;
+		}
+
+		ul li img {
+			width: 400px;
+			height: 400px;
+		}
+
+		i {
+			position: absolute;
+			border-radius: 8px;
+			width: 30px;
+			height: 46px;
+			background-color: red;
+			top: 50%;
+			margin-top: -23px;
+		}
+
+		i.left {
+			left: 0;
+		}
+
+		i.right {
+			left: 370px;
+		}
+
+		ol {
+			position: absolute;
+			list-style: none;
+			left: 100px;
+			bottom: 0;
+		}
+
+		ol li {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: blue;
+			float: left;
+			margin-right: 40px;
+		}
+
+		.cur {
+			background-color: white;
+		}
+
+
+	</style>
+</head>
+<body>
+<div>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>1</li>
+	</ul>
+	1
+	<i class="left"></i>
+	<i class="right"></i>
+	<ol>
+		<li class="cur"></li>
+		<li></li>
+		<li></li>
+		<!--		<li></li>-->
+	</ol>
+</div>
+<script>
+	var idx = 0;
+	$("i.left").mouseenter(function () {
+		idx++;
+		$("ul").stop(true, true).animate({"left": -idx * 400}, 500, function () {
+			$("ol li").removeClass("cur").eq(idx % 3).addClass("cur");
+			if (idx > 2) {
+				idx = 0;
+				$("ul").css("left", 0);
+			}
+
+		});
+	})
+	$("i.right").mouseenter(function () {
+		idx--;
+		if (idx < 0) {
+			idx = 2;
+			$("ul").css("left", -(idx + 1) * 400);
+		}
+		$("ol li").removeClass("cur").eq(idx).addClass("cur");
+		$("ul").stop(true, true).animate({"left": -idx * 400}, 500);
+
+	})
+	$("ol li").mouseenter(function () {
+		idx = $(this).index();
+		$("ul").animate({"left": -idx * 400}, 500);
+		$("ol li").removeClass("cur").eq(idx).addClass("cur");
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		div.outer{
+			width: 500px;
+			height: 800px;
+			background-color: blue;
+		}
+
+		div img {
+			width: 280px;
+			height: 280px;
+			border-radius: 50%;
+			border: 1px solid white;
+			position: relative;
+		}
+
+		div.zhezhao {
+			width: 200px;
+			height: 200px;
+			background-color: gray;
+			position: relative;
+			bottom: 0;
+		}
+		.dragDemo{
+			position:relative;
+			left:20px;
+			top:0;
+		}
+
+	</style>
+
+</head>
+<body>
+<div class = "outer">
+	<div class = "dragDemo">
+		<img src="images/others/2.jpg" alt="">
+	</div>
+
+	<div class="zhezhao"><a href="http://www.baidu.com">百度一下,你就知道</a></div>
+	<script>
+		var div = document.querySelector("div.dragDemo")
+		div.onmousedown = function (e) {
+			var e = e || window.event;
+			var startX = e.offsetX;
+			var startY = e.offsetY;
+			document.onmousemove = function (event) {
+				var event = event || window.event;
+				var endX = event.clientX - startX;
+				var endY = event.clientY - startY;
+				div.style.left = endX + "px";
+				div.style.top = endY + "px";
+				return false;
+			}
+		}
+		div.addEventListener("mouseup",function () {
+			document.onmousemove = null;
+		})
+		var a = document.getElementsByTagName("a")[0];
+		a.addEventListener("click",function (e) {
+			var e = e || window.event;
+			console.log("我是A标签的测试阻止事件")
+			if(e.preventDefault){
+				e.preventDefault();
+			}else{
+				e.returnValue = false;
+			}
+
+		})
+       // div.onmouseup = function () {
+		// 	document.onmousemove = null;
+	   //
+       // }
+	</script>
+</div>
+</body>
+</html>

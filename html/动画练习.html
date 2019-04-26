@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>动画练习</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		div.outer {
+			margin: 0 auto;
+			width: 400px;
+			height: 600px;
+			position: relative;
+			border: 1px solid black;
+		}
+
+		div.outer > div {
+			position: absolute;
+			width: 60%;
+			height: 100%;
+			border: 1px solid black;
+			transition: all 1s linear 0s;
+
+		}
+
+		div.outer > div:first-child {
+			left: 0;
+			top: 0;
+			z-index: 8;
+		}
+
+		div.outer > div:last-child {
+			top: 0;
+			right: 0;
+		}
+
+		div.outer > div.left:hover {
+			transform: rotate(-45deg);
+		}
+
+		div.outer > div.right:hover {
+			transform: rotate(45deg);
+		}
+
+	</style>
+</head>
+<body>
+<div class="outer">
+
+	<div class="left"></div>
+	<div class="right"></div>
+</div>
+</body>
+</html>

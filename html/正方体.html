@@ -1,0 +1,105 @@
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>8</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.carousel {
+			position: relative;
+			/*top: 200px;*/
+			/*left: 200px;*/
+			margin:200px auto;
+			width: 800px;
+			height: 300px;
+			border: 1px solid #000;
+			perspective: 1000px;
+		}
+
+		ul {
+			list-style: none;
+			height:200px;
+			transform-style: preserve-3d;
+			/* transition: transform 0.5s linear 0s; */
+		}
+
+		li {
+			/*position: absolute;*/
+			/*left: 300px;*/
+			/*top: 85px;*/
+			/*width: 200px;*/
+			/*height: 130px;*/
+			position:absolute;
+			left:50%;
+			top:50%;
+			/*margin-left:-100px;*/
+			/*margin-top : -65px;*/
+			width : 200px;
+			height :130px;
+			text-align: center;
+			border:1px solid black;
+		}
+
+		/*button {*/
+		/*	position: absolute;*/
+		/*	top: 130px;*/
+		/*	right: 0;*/
+		/*	width: 50px;*/
+		/*	height: 50px;*/
+		/*}*/
+
+		/*button:first-child {*/
+		/*	left: 0;*/
+		}
+	</style>
+	<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+<div class="carousel">
+	<ul>
+		<li><img src="images/num/0.png" alt=""></li>
+		<li><img src="images/num/1.png" alt=""></li>
+		<li><img src="images/num/2.png" alt=""></li>
+		<li><img src="images/num/3.png" alt=""></li>
+		<li><img src="images/num/4.png" alt=""></li>
+		<li><img src="images/num/5.png" alt=""></li>
+		<li><img src="images/num/6.png" alt=""></li>
+		<li><img src="images/num/7.png" alt=""></li>
+		<li><img src="images/num/8.png" alt=""></li>
+	</ul>
+	<div class="btn">
+		<button>l</button>
+		<button>r</button>
+	</div>
+</div>
+<script>
+	// $("li").each(function (index) {
+	//     $(this).css({
+	//         "transform": "rotateY(" + index * 40 + "deg) translateZ(300px)"
+	//     })
+	// });
+	// var idx = 0;
+	// $("button").eq(0).click(function () {
+	//     idx += 40;
+	//     $("ul").css({
+	//         "transform": "rotateY(" + idx + "deg)"
+	//     });
+	// })
+	// $("button").eq(1).click(function () {
+	//     idx -= 40;
+	//     $("ul").css({
+	//         "transform": "rotateY(" + idx + "deg)"
+	//     });
+	// })
+</script>
+</body>
+
+</html>

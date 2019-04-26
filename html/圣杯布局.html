@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>圣杯布局</title>
+	<style>
+		* {
+			marigin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-width: 700px;
+		}
+
+		.header, .footer {
+			background: #ff9999;
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+		}
+
+		.left, .middle, .right {
+			position: relative;
+			float: left;
+			min-height: 130px;
+			text-align: center;
+		}
+
+		.container {
+			padding: 0 220px 0 200px;
+			overflow: hidden;
+		}
+
+		.left {
+			margin-left: -100%;
+			left: -200px;
+			width: 200px;
+			background: #99ffff;
+		}
+
+		.right {
+			margin-left: -220px;
+			right: -220px;
+			width: 220px;
+			background: #ccff99;
+		}
+
+		.middle {
+			width: 100%;
+			background: #ccffff;
+			word-break: break-all;
+		}
+
+		.footer {
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+	<h4>header</h4>
+</div>
+<div class="container">
+	<div class="middle">
+		<h4>middle</h4>
+	</div>
+	<div class="left">
+		<h4>left</h4>
+	</div>
+	<div class="right">
+		<h4>right</h4>
+	</div>
+</div>
+<div class="footer">
+	<h4>footer</h4>
+</div>
+</body>
+</html>

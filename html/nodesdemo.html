@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>导航栏</title>
+	<style>
+		*{margin:0;padding:0}
+		ul{
+			margin:0px auto;
+			list-style:none;
+			width: 800px;
+			height: 40px;
+			background-color: skyblue;
+		}
+		ul > li {
+			position:relative;
+			width: 80px;
+			height: 40px;
+			float: left;
+			cursor: pointer;
+			/*overflow: hidden;*/
+		}
+		ul>li>h1 ,p{
+			font-size: 16px;
+			color:black;
+			line-height: 40px;
+			padding-left: 4px;
+			/*text-align: center;*/
+		}
+		p{
+			display: none;
+			background-color: #BEC4C8;
+			border-top:1px solid black;
+
+		}
+.demo{
+	margin:0 auto;
+	width: 800px;
+	height: 200px;
+	background-color: red;
+}
+	</style>
+</head>
+<body>
+<ul>
+	<li>
+		<h1>文件</h1>
+		<p>账套选项</p>
+		<p>年结存</p>
+		<p>系统重建</p>
+		<p>财务资料</p>
+		<p>客户资料</p>
+	</li>
+	<li>
+		<h1></h1>
+	</li>
+	<li>
+		<h1></h1>
+	</li>
+	<li>
+		<h1></h1>
+	</li>
+	<li>
+		<h1></h1>
+	</li>
+</ul>
+<!--<div class="demo">1234</div>-->
+
+<script src="js/jQuery3.3.1.js"></script>
+<script>
+	$("ul>li").mouseenter(function () {
+		$(this).children("p").slideDown();
+		console.log(this)
+	})
+	$("ul>li").mouseleave(function () {
+		$(this).children("p").slideUp();
+
+	})
+</script>
+</body>
+</html>

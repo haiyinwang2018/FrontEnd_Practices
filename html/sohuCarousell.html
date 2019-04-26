@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="js/jQuery3.3.1.js"></script>
+	<title>搜狐轮播图</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		div.outer {
+			position: relative;
+			margin: 20px auto;
+			width: 1120px;
+			height: 350px;
+			border: 2px solid black;
+			/*background-color: navy;*/
+		}
+
+		ul, ol {
+			list-style: none;
+		}
+
+		div > ul.bigPics > li {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+		}
+
+		div > ul.bigPics > li.cur {
+			display: block;
+		}
+
+		div.smallPics {
+			position: absolute;
+			width: 550px;
+			height: 54px;
+			left: 50%;
+			bottom: 10px;
+			margin-left: -275px;
+		}
+
+		div > div.smallPics > .hidden > ul {
+			position: relative;
+			height: 90px;
+			list-style: none;
+			width: 5000px;
+			bottom: 0;
+			left: 0;
+			/*overflow: hidden;*/
+			/*z-index: 1;*/
+
+		}
+
+		div > div.smallPics >  .hidden > ul > li {
+			width: 90px;
+			height: 45px;
+			float: left;
+			margin-right: 16px;
+			padding: 2px;
+			padding-top: 7px;
+		}
+
+		div > div.smallPics > .hidden> ul > li.cur {
+			background: url("images/sohu_images/lion.png");
+
+		}
+
+		div > div.smallPics > .hidden >ul >li > img {
+			width: 90px;
+			height: 45px;
+		}
+
+		div div.smallPics > ol {
+			position: absolute;
+			left: 200px;
+		}
+
+		div div.smallPics > ol > li {
+			width: 31px;
+			height: 46px;
+			position: absolute;
+			top: 7px;
+			/*z-index: 888;*/
+		}
+
+		div div.smallPics > ol > li.left {
+			background: url("images/sohu_images/prev.png");
+			left: -37px;
+			z-index: 999;
+		}
+
+		div.smallPics > ol > li.left:hover {
+			background: url("images/sohu_images/prev-h.png");
+		}
+
+		div div.smallPics > ol > li.right {
+			background: url("images/sohu_images/next.png");
+			right: 4px;
+			z-index: 999;
+		}
+
+		div.smallPics > ol > li.right:hover {
+			background: url("images/sohu_images/next-h.png");
+		}
+
+		.hidden {
+			width: 550px;
+			height: 54px;;
+			/*overflow: hidden;*/
+		}
+
+	</style>
+</head>
+<body>
+<div class="outer">
+	<ul class="bigPics">
+		<li class="cur"><img src="images/sohu_images/big_01.jpg" alt=""></li>
+		<li><img src="images/sohu_images/big_02.jpg" alt=""></li>
+		<li><img src="images/sohu_images/big_03.jpg" alt=""></li>
+		<li><img src="images/sohu_images/big_04.jpg" alt=""></li>
+		<li><img src="images/sohu_images/big_05.jpg" alt=""></li>
+	</ul>
+	<div class="smallPics">
+		<div class="hidden">
+			<ul>
+				<li class="cur"><img src="images/sohu_images/small_01.jpg" alt=""></li>
+				<li><img src="images/sohu_images/small_02.jpg" alt=""></li>
+				<li><img src="images/sohu_images/small_03.jpg" alt=""></li>
+				<li><img src="images/sohu_images/small_04.jpg" alt=""></li>
+				<li><img src="images/sohu_images/small_05.jpg" alt=""></li>
+			</ul>
+		</div>
+		<ol>
+			<li class="left"></li>
+			<li class="right"></li>
+		</ol>
+	</div>
+</div>
+<script>
+	$("div.smallPics>.hidden >ul>li").clone().appendTo(".smallPics > .hidden >ul");
+	var idx = 0
+	$("ol>li.left").click(function () {
+		idx++;
+		$(".smallPics>.hidden > ul").stop(true, true).animate({"left": -idx * 110}, 500, function () {
+
+			if (idx > 4) {
+				idx = 0;
+				$(".smallPics> .hidden>ul").css("left", 0)
+			}
+		})
+
+
+	})
+</script>
+</body>
+</html>

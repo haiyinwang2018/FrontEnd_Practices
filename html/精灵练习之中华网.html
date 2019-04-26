@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>精灵练习之中华网</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			width: 356px;
+			height: 241px;
+			margin: 20px auto;
+
+		}
+
+		.header {
+			height: 28px;
+			border: 1px solid #DDDDDD;
+			position: relative;
+
+		}
+
+		.box .header .left {
+			float: left;
+			width: 110px;
+			height: 30px;
+			line-height: 30px;
+			background-color: #B31515;
+			position: absolute;
+			left: -1px;
+			top: -1px;
+			color: white;
+			font-size: 18px;
+			text-align: center;
+			font-family: "microsoft yahei";
+		}
+
+		.box .header .right a {
+			float: right;
+			height: 28px;
+			line-height: 31px;
+			background-color: #F7F7F7;
+			width: 100%;
+			padding-right: 28px;
+			text-align: right;
+			color: #999999;
+			font-size: 14px;
+			text-decoration: none;
+
+		}
+
+		.box .header .right a:hover {
+			text-decoration: underline;
+			color: #B31515;
+
+		}
+
+		.box .header .right a:hover i {
+
+			background: url(images/others/jingling.png) no-repeat -430px -406px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 26px;
+			height: 26px;
+
+		}
+
+		.box .header .right b {
+			width: 26px;
+			height: 26px;
+			position: absolute;
+			background: url(images/others/jingling.png) no-repeat -430px -304px;
+			top: 0;
+			right: 0;
+		}
+
+		.box ul li.normal {
+			list-style: none;
+			line-height: 26px;
+			padding-left: 18px;
+			font-size: 12px;
+			position: relative;
+		}
+
+		.box ul li.normal i {
+			width: 13px;
+			height: 13px;
+			position: absolute;
+			left: 0;
+			top: 6px;
+			background: url(images/others/zhonghuawang.png) no-repeat -29px -166px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		.current {
+			width: 100%;
+			height: 83px;
+			background: url(images/others/dotted001.png) repeat-x bottom;
+			padding: 14px 0;
+		}
+
+		.current .pic img {
+			float: left;
+			/* width: 50px; */
+			height: 83px;
+			padding-right: 14px;
+
+		}
+
+		.current .word {
+			float: left;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="header">
+		<div class="left">守艺中华</div>
+		<div class="right"><a href="">更多 <b></b></a>
+		</div>
+	</div>
+	<ul>
+		<li class="current">
+			<div class="pic">
+				<img src="images/others/pic_shouyizhonghua.jpg" alt="封面">
+
+			</div>
+			<div class="word">
+				守艺·人物|贡斌：为手工纸正名者
+			</div>
+		</li>
+		<li class="normal"><i></i> 守艺·人物|贡斌：为手工纸正名者</li>
+		<li class="normal"><i></i> 守艺·人物|贡斌：为手工纸正名者</li>
+		<li class="normal"><i></i> 守艺·人物|贡斌：为手工纸正名者</li>
+	</ul>
+</div>
+</body>
+</html>
