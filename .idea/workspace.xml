@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/../FrontEnd_Practices/js/数组算法练习.js" line="248" />
+    <bookmark url="file://$PROJECT_DIR$/js/数组算法练习.js" line="248" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6fcd912-82eb-497e-afb4-9c664a5029f5" name="Default Changelist" comment="" />
+    <list default="true" id="f6fcd912-82eb-497e-afb4-9c664a5029f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/html/07wuziqi.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/07wuziqi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/随机算法练习/随机算法练习.html" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -20,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/canvasImage.html">
+        <entry file="file://$PROJECT_DIR$/html/canvasImage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="-1078">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -98,7 +101,7 @@
         <option value="$PROJECT_DIR$/html/carvas.html" />
         <option value="$PROJECT_DIR$/js/算法复习.js" />
         <option value="$PROJECT_DIR$/html/canvasImage.html" />
-        <option value="$PROJECT_DIR$/../FrontEnd_Practices/html/canvasImage.html" />
+        <option value="$PROJECT_DIR$/html/canvasImage.html" />
       </list>
     </option>
   </component>
@@ -108,9 +111,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -122,11 +126,7 @@
         <subPane>
           <expand>
             <path>
-              <item name="FrontEndPractices" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FrontEnd_Practices" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FrontEndPractices" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FrontEnd_Practices" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
@@ -137,10 +137,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.grunt.grunt-cli.package" value="" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
     <property name="js.last.introduce.type" value="VAR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -203,7 +205,7 @@
     <configuration name="mobile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/FrontEndPractices/html/mobile.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="算法复习.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/../FrontEnd_Practices/js/算法复习.js" working-dir="$PROJECT_DIR$/../FrontEnd_Practices/js">
+    <configuration name="算法复习.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/算法复习.js" working-dir="$PROJECT_DIR$/js">
       <method v="2" />
     </configuration>
     <configuration name="数组算法练习.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/js/数组算法练习.js" working-dir="$PROJECT_DIR$">
@@ -260,6 +262,7 @@
       <workItem from="1555740173961" duration="632000" />
       <workItem from="1555747469961" duration="88893000" />
       <workItem from="1556250910834" duration="4845000" />
+      <workItem from="1556284700015" duration="660000" />
     </task>
     <task id="LOCAL-00001" summary="this is a demo">
       <created>1556244131933</created>
@@ -279,7 +282,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="798093000" />
+    <option name="totallyTimeSpent" value="798753000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,10 +294,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5952694" visible="true" weight="0.18324292" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5952694" visible="true" weight="0.18324292" />
       <window_info id="Structure" order="1" sideWeight="0.40473062" side_tool="true" weight="0.11995178" />
       <window_info id="Favorites" order="2" sideWeight="0.4053476" side_tool="true" weight="0.11995178" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -306,7 +308,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4996986" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49909583" visible="true" weight="0.21020408" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49909583" visible="true" weight="0.22032085" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50090414" side_tool="true" weight="0.21020408" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -381,13 +383,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/正方体.html" />
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/star/0.jpg">
+    <entry file="file://$PROJECT_DIR$/images/star/0.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/003.js">
+    <entry file="file://$PROJECT_DIR$/js/003.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/002.js">
+    <entry file="file://$PROJECT_DIR$/js/002.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
@@ -397,88 +399,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/while 循环练习.js">
+    <entry file="file://$PROJECT_DIR$/js/while 循环练习.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="699">
           <caret line="142" selection-start-line="142" selection-end-line="142" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/for 循环练习004.js">
+    <entry file="file://$PROJECT_DIR$/js/for 循环练习004.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/001.js">
+    <entry file="file://$PROJECT_DIR$/js/001.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-683" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CSS3实战.html" />
     <entry file="file://$PROJECT_DIR$/测试$css.html" />
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/CSS3实战.html">
+    <entry file="file://$PROJECT_DIR$/html/CSS3实战.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-773" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/美团民宿布局设计.html">
+    <entry file="file://$PROJECT_DIR$/html/美团民宿布局设计.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1687" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/随机算法练习/随机算法练习.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/practices_json.js">
+    <entry file="file://$PROJECT_DIR$/随机算法练习/随机算法练习.html" />
+    <entry file="file://$PROJECT_DIR$/js/practices_json.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/CSS复习.html">
+    <entry file="file://$PROJECT_DIR$/html/CSS复习.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-688" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/08球.html">
+    <entry file="file://$PROJECT_DIR$/html/08球.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1187" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/动画练习.html">
+    <entry file="file://$PROJECT_DIR$/html/动画练习.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-567" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/flight.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/flight.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/travel.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/travel.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/jhj.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/jhj.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/travel2.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/travel2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/本地存储.html">
+    <entry file="file://$PROJECT_DIR$/html/本地存储.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="47" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/home.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/home.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/banner1.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/banner1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/CSS考试练习001.html">
+    <entry file="file://$PROJECT_DIR$/html/CSS考试练习001.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18279">
           <caret line="3852" column="17" lean-forward="true" selection-start-line="3852" selection-start-column="17" selection-end-line="3852" selection-end-column="17" />
@@ -503,39 +499,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/banner2.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/banner2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/banner3.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/banner3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/banner4.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/banner4.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/home2.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/home2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/布局练习.html">
+    <entry file="file://$PROJECT_DIR$/html/布局练习.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/xiecheng/携程网设计图.png">
+    <entry file="file://$PROJECT_DIR$/images/xiecheng/携程网设计图.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/css/xiecheng.css">
+    <entry file="file://$PROJECT_DIR$/css/xiecheng.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="137" column="1" selection-start-line="137" selection-start-column="1" selection-end-line="137" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/测试用.html">
+    <entry file="file://$PROJECT_DIR$/html/测试用.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/函数.js">
+    <entry file="file://$PROJECT_DIR$/js/函数.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="536" column="23" selection-start-line="536" selection-start-column="23" selection-end-line="536" selection-end-column="23" />
@@ -545,77 +541,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/mobile.html">
+    <entry file="file://$PROJECT_DIR$/html/mobile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/carvas.html">
+    <entry file="file://$PROJECT_DIR$/html/carvas.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="45" column="110" selection-start-line="45" selection-start-column="110" selection-end-line="45" selection-end-column="110" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/slqh.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/slqh.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/wizard.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/wizard.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/giant.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/giant.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/b0.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/b0.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/b1.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/b1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/b2.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/b2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/goblin.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/goblin.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/man.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/man.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/girl.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/girl.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/bomb.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/bomb.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/b3.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/b3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/images/ges/barbarian.png">
+    <entry file="file://$PROJECT_DIR$/images/ges/barbarian.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/俄罗斯方块练习.html">
+    <entry file="file://$PROJECT_DIR$/html/俄罗斯方块练习.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6748" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/debug.html">
+    <entry file="file://$PROJECT_DIR$/html/debug.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1161" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/html/canvasImage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../FrontEnd_Practices/js/算法复习.js">
+    <entry file="file://$PROJECT_DIR$/js/算法复习.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/canvasImage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1078">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
