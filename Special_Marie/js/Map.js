@@ -1,56 +1,57 @@
 //地图矩阵  根据素材调整矩阵
-function Map(w, h) {
-    this.mapLocationSet = [];
-    this.mapSize = { x: w, y: h };
+function Map() {
+    //这个地图数据集很有意思 ,存储三个信息 地图位置坐标, 图片类型  ,用于画图遍历 
+    //有两个坐标信息 , 地图只存有图片在地图的位置;准确的说是背景性质的图片,敌人玩家拥有自己的数据库;
+    //
+    this.dataCenter = [];
+    this.mapSize = {};
     this.dataSwitch = true;
 
     let self = this;
     //存储需要画出的图片类型
-    let chooseImage = document.querySelector("#chooseImage");
-    chooseImage.onclick = function (e) {
-        var e = e || window.event;
-        var someType = e.target.innerText;
+    let submit = document.querySelector("#submit");
+    let sprite = document.querySelector("#sprite");
+    let spriteType = document.querySelector("#spriteType")
+    submit.onclick = function (e) {
+        // var e = e || window.event;
+        // var someType = e.target.innerText;
+        var someType = {
+            sprite: sprite.value,
+            spriteType: spriteType.value
+        }
+
         self.dataSwitch = true;
         document.onmousemove = function (e) {
             var e = e || window.event;
             //确保每个点都在对应的小格子的左上角
             //并且将所有的笔触经过的矩阵,存入数组
-            if(e.offsetX >= 0 && e.offsetY >= 0){
-                var x = e.offsetX ;
-                var y = e.offsetY ;
-            }else {
-                var x = 0;
-                var y = 0;
-            }
-        
-            self.dataSwitch && self.mapLocationSet.push({
-                x: parseInt( x / self.mapSize.x) * self.mapSize.x,
-                y: parseInt( y / self.mapSize.y) * self.mapSize.y,
+
+            self.dataSwitch && self.dataCenter.push({
+                x: parseInt(e.offsetX / self.mapSize.x) * self.mapSize.x,
+                y: parseInt(e.offsetY / self.mapSize.y) * self.mapSize.y,
                 z: someType
             });
         }
 
     }
-    document.querySelector("#exportData").onclick = function(){
-        document.querySelector("#textarea").innerText = JSON.stringify(self.mapLocationSet);
-    
+    document.querySelector("#exportData").onclick = function () {
+        document.querySelector("#textarea").innerText = JSON.stringify(self.dataCenter);
+
     }
-    document.ondblclick = function(){
-        self.dataSwitch = false;
+    document.ondblclick = function () {
+        self.dataSwitch = !self.dataSwitch;
     }
 
     document.querySelector("#erase").addEventListener("click", function () {
 
-        console.log("我是橡皮擦", chooseImage);
         //点击橡皮擦后,先停止画图;
         self.dataSwitch = false;
         document.onmousemove = function (e) {
             var e = e || window.event;
-            for (let i = 0; i < self.mapLocationSet.length; i++) {
-                if (self.mapLocationSet[i].x == parseInt(e.offsetX / self.mapSize.x) * self.mapSize.x &&
-                    self.mapLocationSet[i].y == parseInt(e.offsetY / self.mapSize.y) * self.mapSize.y) {
-                    self.mapLocationSet.splice(i, 1);
-                    console.log(i);
+            for (let i = 0; i < self.dataCenter.length; i++) {
+                if (self.dataCenter[i].x == parseInt(e.offsetX / self.mapSize.x) * self.mapSize.x &&
+                    self.dataCenter[i].y == parseInt(e.offsetY / self.mapSize.y) * self.mapSize.y) {
+                    self.dataCenter.splice(i, 1);
                     break;
 
                 }
@@ -64,11 +65,11 @@ function Map(w, h) {
 
 Map.prototype.update = function () {
     //数组去重,避免重复画图;
-    if (this.mapLocationSet.length) {
-        for (let i = this.mapLocationSet.length - 1; i >= 0; i--) {
+    if (this.dataCenter.length) {
+        for (let i = this.dataCenter.length - 1; i >= 0; i--) {
             for (let j = i - 1; j >= 0; j--)
-                if (this.mapLocationSet[i].x == this.mapLocationSet[j].x && this.mapLocationSet[i].y == this.mapLocationSet[j].y) {
-                    this.mapLocationSet.splice(i, 1);
+                if (this.dataCenter[i].x == this.dataCenter[j].x && this.dataCenter[i].y == this.dataCenter[j].y) {
+                    this.dataCenter.splice(i, 1);
                     break;
                 }
         }

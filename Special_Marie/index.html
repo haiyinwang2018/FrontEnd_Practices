@@ -15,43 +15,46 @@
         }
 
         div.outer {
-            margin:10px auto;
+            margin: 10px auto;
             height: 40px;
             display: flex;
         }
 
         #chooseImage {
-            flex: 5;
+            flex: 3;
             height: 100%;
             display: flex;
         }
-        button{
+
+        input {
             border-radius: 5px;
             display: inline-block;
-            height:40px;
+            height: 100%;
 
         }
-        div.outer > div > button{
-            flex:1;
+
+        div.outer>div>input {
+            flex: 1;
         }
-        #erase{
-            flex : 1;
+
+        #erase {
+            flex: 1;
         }
+
         #exportData {
-            flex : 1;
+            flex: 1;
         }
     </style>
 </head>
 
 <body>
-    <div class = "outer">
-        <button id = "erase">橡皮擦</button>
-        <button id = "exportData">导出地图数据</button>
-        <div id = "chooseImage">
-            <button>redwall</button>
-            <button>grass</button>
-            <button>greywall</button>
-            <button>waterflow</button>
+    <div class="outer">
+        <input type="button" id="erase" value="橡皮擦">
+        <input type="button" id="exportData" value="导出地图数据 ">
+        <div id="chooseImage">
+            <input type="text" id="sprite" placeholder="请输入对应的精灵图">
+            <input type="text" id="spriteType" placeholder="请输入对应的图片的类型">
+            <input type="button" id = "submit" value = "确认">
         </div>
     </div>
     <canvas id="canvas" width="1200" height="600"></canvas>

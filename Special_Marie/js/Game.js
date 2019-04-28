@@ -2,12 +2,16 @@
 
 function Game(Map, Player, Enemy, Resources) {
     //初始化一个32*32 的矩阵
-    this.map = new Map(32, 32);
+    this.map = new Map();
+    this.resources = new Resources();
+    //让地图获得图片资源的尺寸// 待会封装成函数
+    this.map.mapSize.x = this.resources.imageSize.mario.xSize;
+    this.map.mapSize.y = this.resources.imageSize.mario.ySize;
+
     this.player = new Player();
     this.enemy = new Enemy();
     this.canvas = document.getElementById("canvas");
     this.ctx = this.canvas.getContext("2d");
-    this.resources = new Resources();
     this.loadedCount = 0;
     this.amount = Object.keys(this.resources.imagesSet).length;
     let self = this;
@@ -24,26 +28,27 @@ function Game(Map, Player, Enemy, Resources) {
 
 
     // this.dataCenter = [{
-    //     image :someImage,
+    //     image :dataCenter[i].z,
     //     type  : someType,
     //     locationSet : someLocationSet
     // },]
 
 
 }
-Game.prototype.draw = function (someImage) {
-    if (someImage) {
-        for (let i = 0; i < this.map.mapLocationSet.length; i++) {
+// 通用的画图函数的, 需要的参数 ,图片 , 精灵位置 , 地图位置 
+Game.prototype.draw = function (dataCenter ) {
+    if (dataCenter) {
+        for (let i = 0; i < this.map.dataCenter.length; i++) {
             this.ctx.drawImage(
-                this.resources.imagesSet[someImage],
-                this.resources.types[someImage][this.map.mapLocationSet[i].z].x,
-                this.resources.types[someImage][this.map.mapLocationSet[i].z].y,
-                this.map.mapSize.x,
-                this.map.mapSize.y,
-                this.map.mapLocationSet[i].x,
-                this.map.mapLocationSet[i].y,
-                this.map.mapSize.x,
-                this.map.mapSize.y
+                this.resources.imagesSet[dataCenter[i].z.sprite],
+                this.resources.types[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].x,
+                this.resources.types[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].y,
+                this.resources.imageSize[dataCenter[i].z.sprite].xSize,
+                this.resources.imageSize[dataCenter[i].z.sprite].ySize,
+                dataCenter[i].x,
+                dataCenter[i].y,
+                this.resources.imageSize[dataCenter[i].z.sprite].xSize,
+                this.resources.imageSize[dataCenter[i].z.sprite].ySize
             )
         }
     }
@@ -59,7 +64,8 @@ Game.prototype.start = function () {
         self.ctx.font = " 30px  Arial";
         self.ctx.fillText(self.frame, 40, 40);
         self.update();
-        self.draw("tile");
+        console.log(self.map.dataCenter)
+        self.draw(self.map.dataCenter);
         //画图参数          图片对象       切片定位x, y     切片大小 地图定位x,y 地图大小
         // self.ctx.drawImage(self.R.tile, 32 *2, 32 * 0, 32, 32, 100, 100, 32, 32);
     }, 200)
