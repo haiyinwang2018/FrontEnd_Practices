@@ -5,27 +5,31 @@ function Map() {
     //
     this.dataCenter = [];
     this.mapSize = {};
-    this.dataSwitch = true;
+    this.dataSwitch = false;
 
     let self = this;
     //存储需要画出的图片类型
     let submit = document.querySelector("#submit");
     let sprite = document.querySelector("#sprite");
-    let spriteType = document.querySelector("#spriteType")
+    let sprite_child = document.querySelector("#sprite_child");
+    let spriteType = document.querySelector("#spriteType");
     submit.onclick = function (e) {
         // var e = e || window.event;
         // var someType = e.target.innerText;
-        var someType = {
-            sprite: sprite.value,
-            spriteType: spriteType.value
+        //如果没有输入,数据中心不取数据,地图数据
+        if (sprite.value && sprite_child.value && spriteType.value) {
+            var someType = {
+                sprite: sprite.value.replace(/^\s+|\s+$/g, ""),
+                sprite_child: sprite_child.value.replace(/^\s+|\s+$/g, ""),
+                spriteType: spriteType.value.replace(/^\s+|\s+$/g, "")
+            }
+            self.dataSwitch = true;
         }
 
-        self.dataSwitch = true;
         document.onmousemove = function (e) {
             var e = e || window.event;
             //确保每个点都在对应的小格子的左上角
             //并且将所有的笔触经过的矩阵,存入数组
-
             self.dataSwitch && self.dataCenter.push({
                 x: parseInt(e.offsetX / self.mapSize.x) * self.mapSize.x,
                 y: parseInt(e.offsetY / self.mapSize.y) * self.mapSize.y,
