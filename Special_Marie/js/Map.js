@@ -1,28 +1,36 @@
 //地图矩阵  根据素材调整矩阵
-function Map() {
+function Map(game) {
     //这个地图数据集很有意思 ,存储三个信息 地图位置坐标, 图片类型  ,用于画图遍历 
     //有两个坐标信息 , 地图只存有图片在地图的位置;准确的说是背景性质的图片,敌人玩家拥有自己的数据库;
-    //
+    //尝试就资源文件传入地图
+    // this.res =  this.game.res;
+    this.game = game;
     this.dataCenter = [];
-    this.mapSize = {};
+    // this.mapSize = {};
     this.dataSwitch = false;
 
     let self = this;
     //存储需要画出的图片类型
     let submit = document.querySelector("#submit");
     let sprite = document.querySelector("#sprite");
-    let sprite_child = document.querySelector("#sprite_child");
+    // let sprite_child = document.querySelector("#sprite_child");
     let spriteType = document.querySelector("#spriteType");
     submit.onclick = function (e) {
         // var e = e || window.event;
         // var someType = e.target.innerText;
         //如果没有输入,数据中心不取数据,地图数据
-        if (sprite.value && sprite_child.value && spriteType.value) {
-            var someType = {
+        if (sprite.value && spriteType.value) {
+            var someType = { 
                 sprite: sprite.value.replace(/^\s+|\s+$/g, ""),
-                sprite_child: sprite_child.value.replace(/^\s+|\s+$/g, ""),
+                // sprite_child: sprite_child.value.replace(/^\s+|\s+$/g, ""),
                 spriteType: spriteType.value.replace(/^\s+|\s+$/g, "")
             }
+            self.mapSize = {
+                //someType.spriteType  这几个值 有些特殊,我试一下
+                x: self.game.res.imageSize[someType.sprite][someType.spriteType].xSize,
+                y: self.game.res.imageSize[someType.sprite][someType.spriteType].ySize
+            }
+
             self.dataSwitch = true;
         }
 

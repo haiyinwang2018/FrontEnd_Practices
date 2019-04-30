@@ -1,7 +1,14 @@
 {
-	var b =2;
-	var a = [this.b]
-	consoel.log(a);
+function A(){
+		this.x = 1,
+		this.y = {
+			foo : this.x
+		}
+
+	}
+	var a = new A();
+	console.log(a);
 
 
-}x
+
+}

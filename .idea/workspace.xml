@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f6fcd912-82eb-497e-afb4-9c664a5029f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Special_Marie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Special_Marie/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Special_Marie/js/Enemy.js" beforeDir="false" afterPath="$PROJECT_DIR$/Special_Marie/js/Enemy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Special_Marie/js/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/Special_Marie/js/Game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Special_Marie/js/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/Special_Marie/js/Map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Special_Marie/js/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/Special_Marie/js/Player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Special_Marie/js/Resources.js" beforeDir="false" afterPath="$PROJECT_DIR$/Special_Marie/js/Resources.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/算法复习.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/算法复习.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,6 +37,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/算法复习.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Special_Marie/images/coin.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
@@ -49,7 +60,7 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Special_Marie/images/mario.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
@@ -61,6 +72,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Special_Marie/images/mogu.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Special_Marie/images/tile.bmp">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -171,7 +187,7 @@
               <item name="FrontEnd_Practices" type="b2602c69:ProjectViewProjectNode" />
               <item name="FrontEnd_Practices" type="462c0819:PsiDirectoryNode" />
               <item name="Special_Marie" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FrontEnd_Practices" type="b2602c69:ProjectViewProjectNode" />
@@ -310,7 +326,7 @@
       <workItem from="1555740173961" duration="632000" />
       <workItem from="1555747469961" duration="88893000" />
       <workItem from="1556250910834" duration="4845000" />
-      <workItem from="1556284700015" duration="4148000" />
+      <workItem from="1556284700015" duration="6588000" />
     </task>
     <task id="LOCAL-00001" summary="this is a demo">
       <created>1556244131933</created>
@@ -330,7 +346,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="802241000" />
+    <option name="totallyTimeSpent" value="804681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,14 +359,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5952694" visible="true" weight="0.18324292" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5952694" visible="true" weight="0.18324292" />
       <window_info id="Structure" order="1" sideWeight="0.40473062" side_tool="true" weight="0.11995178" />
       <window_info id="Favorites" order="2" sideWeight="0.4053476" side_tool="true" weight="0.11995178" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -618,16 +633,6 @@
         <state relative-caret-position="-1161" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Special_Marie/images/tile.bmp">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/算法复习.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/canvasImage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1086">
@@ -635,22 +640,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Special_Marie/images/coin.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Special_Marie/images/girl.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Special_Marie/images/man.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Special_Marie/images/mix.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/js/算法复习.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Special_Marie/images/mogu.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Special_Marie/images/coin.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Special_Marie/images/mario.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Special_Marie/images/mix.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Special_Marie/images/tile.bmp">
       <provider selected="true" editor-type-id="images" />
     </entry>
   </component>

@@ -56,11 +56,18 @@
         <input type="button" id="exportData" value="导出地图数据 ">
         <div id="chooseImage">
             <input type="text" id="sprite" placeholder="请输入对应的精灵图">
-            <input type="text" id = "sprite_child" placeholder = "请输入精灵图的子图">
+            <!-- <input type="text" id = "sprite_child" placeholder = "请输入精灵图的子图"> -->
             <input type="text" id="spriteType" placeholder="请输入对应的图片的类型">
             <input type="button" id = "submit" value = "确认">
         </div>
     </div>
+    <audio  id = "groundtheme"src="media/groundtheme.mp3"></audio>
+    <audio  id = "up"src="media/up.mp3"></audio>
+    <audio  id = "lostlife"src="media/lostlife.mp3"></audio>
+    <audio  id = "coin"src="media/coin.mp3"></audio>
+    <audio  id = "gameover"src="media/gameover.mp3"></audio>
+    <audio  id = "hurry"src="media/hurry.mp3"></audio>
+    <audio  id = "jump"src="media/jump.mp3"></audio>
     <canvas id="canvas" width="1200" height="600"></canvas>
     <textarea name="" id="textarea" cols="148" rows="30"></textarea>
     <script src="js/Map.js"></script>
@@ -69,7 +76,7 @@
     <script src="js/Enemy.js"></script>
     <script src="js/Game.js"></script>
     <script>
-        new Game(Map, Player, Enemy, Resources);
+        new Game();
     </script>
 </body>
 
