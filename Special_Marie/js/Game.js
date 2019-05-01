@@ -57,23 +57,20 @@ Game.prototype.draw = function (dataCenter) {
 
             this.ctx.drawImage(
                 //精灵图片对象 ,大图
-                this.res.imagesSet[dataCenter[i].z.sprite],
+                dataCenter[i].img,
                 //大图中对应小图定位
-                //第0项 64
-                this.res.types[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].x,
-                //第0项 0
-                this.res.types[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].y,
+                dataCenter[i].sprite_x,
+                dataCenter[i].sprite_y,
                 //对应小图的尺寸
                 //第0项的图片尺寸32 *32
-                this.res.imageSize[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].xSize,
-                this.res.imageSize[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].ySize,
+                dataCenter[i].spriteSize_x,
+                dataCenter[i].spriteSize_y,
                 //对应地图的位置
-                //第0项的 地图位置 74 *21
-                dataCenter[i].x,
-                dataCenter[i].y,
+                dataCenter[i].map_x,
+                dataCenter[i].map_y,
                 //对应地图的大小,因为地图的位置和精灵的大小一致,所以用同一个值;
-                this.res.imageSize[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].xSize ,
-                this.res.imageSize[dataCenter[i].z.sprite][dataCenter[i].z.spriteType].ySize 
+                dataCenter[i].mapSize_x,
+                dataCenter[i].mapSize_y
             )
         }
     }
