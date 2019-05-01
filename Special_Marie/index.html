@@ -2,82 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Special Marie</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <style>
-        * #canvas {
-            background-color: ivory;
-            border: 1px solid black;
-            /* position: fixed; */
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Special Marie</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		#canvas {
+			/*width: calc(100% - 10px);*/
+			background-color: ivory;
+			border: 1px solid black;
+			margin: 4px;
+			border-radius : 10px;
+			/* position: fixed; */
+		}
 
-        div.outer {
-            margin: 10px auto;
-            height: 40px;
-            display: flex;
-        }
+		div.outer {
+			margin: 10px 4px;
+			height: 40px;
+			display: flex;
+		}
 
-        #chooseImage {
-            flex: 3;
-            height: 100%;
-            display: flex;
-        }
+		#chooseImage {
+			flex: 3;
+			height: 100%;
+			display: flex;
+		}
 
-        input {
-            border-radius: 5px;
-            display: inline-block;
-            height: 100%;
+		input {
+			border-radius: 5px;
+			display: inline-block;
+			height: 100%;
 
-        }
+		}
 
-        div.outer>div>input {
-            flex: 1;
-        }
+		div.outer > div > input {
+			flex: 1;
+		}
 
-        #erase {
-            flex: 1;
-        }
+		#erase {
+			flex: 1;
+		}
 
-        #exportData {
-            flex: 1;
-        }
-        #textarea{
-            display: none;
-        }
-    </style>
+		#exportData {
+			flex: 1;
+		}
+
+		#textarea {
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
-    <div class="outer">
-        <input type="button" id="erase" value="橡皮擦">
-        <input type="button" id="exportData" value="导出地图数据 ">
-        <div id="chooseImage">
-            <input type="text" id="sprite" placeholder="请输入对应的精灵图">
-            <!-- <input type="text" id = "sprite_child" placeholder = "请输入精灵图的子图"> -->
-            <input type="text" id="spriteType" placeholder="请输入对应的图片的类型">
-            <input type="button" id = "submit" value = "确认">
-        </div>
-    </div>
-    <audio  id = "groundtheme"src="media/groundtheme.mp3"></audio>
-    <audio  id = "up"src="media/up.mp3"></audio>
-    <audio  id = "lostlife"src="media/lostlife.mp3"></audio>
-    <audio  id = "coin"src="media/coin.mp3"></audio>
-    <audio  id = "gameover"src="media/gameover.mp3"></audio>
-    <audio  id = "hurry"src="media/hurry.mp3"></audio>
-    <audio  id = "jump"src="media/jump.mp3"></audio>
-    <canvas id="canvas" width="1200" height="600"></canvas>
-    <textarea name="" id="textarea" cols="148" rows="30"></textarea>
-    <script src="js/Map.js"></script>
-    <script src="js/Resources.js"></script>
-    <script src="js/Player.js"></script>
-    <script src="js/Enemy.js"></script>
-    <script src="js/Game.js"></script>
-    <script>
-        new Game();
-    </script>
+<div class="outer">
+	<input type="button" id="erase" value="橡皮擦">
+	<input type="button" id="exportData" value="导出地图数据 ">
+	<div id="chooseImage">
+		<input type="text" id="sprite" placeholder="请输入对应的精灵图">
+		<!-- <input type="text" id = "sprite_child" placeholder = "请输入精灵图的子图"> -->
+		<input type="text" id="spriteType" placeholder="请输入对应的图片的类型">
+		<input type="button" id="submit" value="确认">
+	</div>
+</div>
+<audio id="groundtheme" src="media/groundtheme.mp3"></audio>
+<audio id="up" src="media/up.mp3"></audio>
+<audio id="lostlife" src="media/lostlife.mp3"></audio>
+<audio id="coin" src="media/coin.mp3"></audio>
+<audio id="gameover" src="media/gameover.mp3"></audio>
+<audio id="hurry" src="media/hurry.mp3"></audio>
+<audio id="jump" src="media/jump.mp3"></audio>
+<canvas id="canvas" width="1200" height="600"></canvas>
+<textarea name="" id="textarea" cols="148" rows="30"></textarea>
+<script src="js/Map.js"></script>
+<script src="js/Resources.js"></script>
+<script src="js/Player.js"></script>
+<script src="js/Enemy.js"></script>
+<script src="js/Game.js"></script>
+<script>
+	new Game();
+</script>
 </body>
 
 </html>
